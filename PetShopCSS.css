@@ -1,0 +1,88 @@
+body{
+    margin: 0px;
+}
+
+header {
+    background-color: #f9f9f9;
+    padding: 20px 0;
+    text-align: center;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    height: 60px;
+    padding: 40px;
+}
+
+article {
+    background-color: #ffffff;
+    padding: 20px;
+}
+h1, h4 {
+    font-family: Arial, sans-serif;
+}
+h1 {
+    font-size: 24px;
+}
+h4 {
+    font-size: 18px;
+}
+
+img{
+    border-radius: 20px;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+}.cancelarCenter{
+    display: block;
+}.Centralizar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+.inputFaleComNosco{
+    height: 200px;
+    width: 100%;
+
+
+}
+
+.logo-img {
+    max-width: 150px;
+}
+
+.banner-img{
+    width: auto;
+    height: 100lvh;
+}
+
+.horizontal-list {
+    list-style: none; 
+    display: flex;
+    gap: 10px;
+}.horizontal-list li {
+    padding: 5px; 
+    background-color: #f9f9f9; 
+}
+
+.box{
+    border: 1px solid #f9f9f9;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+}
