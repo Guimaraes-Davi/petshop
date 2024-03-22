@@ -17,16 +17,14 @@
     </script>
   </head>
   <body>
-    <p>DOM</p>
-    <div id = "id DOM">
-    <p>Parágrafo 2</p>
-    </div>
-    <form name="frml">
-      Login: <input type="text" name="login"></p>
-      Senha: <input type="password" name="senha"></p>
-
-      <input type="submit" value="enviar" onclick="mostrarDados()">
-    </form>
+    <section class = "box">
+      <form name="frml">
+        Login: <input type="text" name="login"></p>
+        Senha: <input type="password" name="senha"></p>
+        
+        <input type="submit" value="enviar" onclick="mostrarDados()">
+      </form>
+    </section>
 
   </body>
 </html>
@@ -36,3 +34,71 @@
   var y = x.getElementsByTagName("p");
   document.write('obtendo o primeiro paragrafo id DOM:'+y[0].innerHTML);
 </script>
+
+<style>
+
+body{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+    
+  header {
+      background-color: #f9f9f9;
+      padding: 20px 0;
+      text-align: center;
+  }
+  ul {
+      list-style: none;
+  }li {
+      display: inline-block;
+      margin-right: 20px;
+  }
+
+  footer{
+      background-color: black;
+      color: white;
+      height: 60px;
+      padding: 40px;
+  }
+
+  button{
+      background-color: black;
+      color: white;
+      border-radius: 10px;
+  }
+
+  article {
+      background-color: #ffffff;
+      padding: 20px;
+  }
+  h1, h4 {
+      font-family: Arial, sans-serif;
+  }
+  h1 {
+      font-size: 24px;
+  }
+  h4 {
+      font-size: 18px;
+  }
+
+  img{
+      border-radius: 20px;
+  }
+
+  a {
+      color: currentColor;
+      text-decoration: none;
+  }
+
+  .box{
+    border: 1px solid #f9f9f9;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+}.box article{
+    background-color: #f9f9f9;
+}
+
+</style>
