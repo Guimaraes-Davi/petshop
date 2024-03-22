@@ -1,55 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="PetShopCSS.css">
-</head>
-<body>
-    <header>
-        <a href="PetShopHTML.html"><img class="logo-img" src="imgkjhg-removebg-preview.png"></a>
-        <nav>
-            <ul>
-                <li><a href="PetShopHTML.html">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Produtos</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="PaginaCarrinho.html">Carinho</a></li>
-            </ul>
-        </div>
-        </nav>
-    </header>
+    <link rel="stylesheet" href="src/style.css">
+    <script src="src/script.js"></script>
+    <script type="text/javascript">
+      function mostrarDados2(){
+        var x=document.getElementById("frm2");
 
-    <img id="center" src="image.png"> 
-    <h1>Carrinho</h1>
-    <section class="box">
-        <img src="https://a-static.mlcdn.com.br/102x76/playstation-5-marvels-spider-man-2-825gb-1-controle-branco/magazineluiza/238000000/54e5dcaf5f743a339602fa2df7c0cb2c.jpg">    
-        <article>
-            <h5>PlayStation 5 Marvels Spider-Man 2 - 825GB 1 Controle Branco</h5>
-            <h5>Valor: R$ 4000,00</h5>
-            <h5>Vendido e entregue por MAGALU</h5>
-            Quantidade:
-            <select name="" id="cabecalho">4</select>🗑️
-            
-        </article>
+        for(var i=0; i<x.langth;i++){
+          document.write(x.elements[i].value);
+          document.write( "<br>" );
+        }
+            }
+    </script>
+  </head>
+  <body>
+    <section class = "box">
+      <form name="frml">
+        Login: <input type="text" name="login"></p>
+        Senha: <input type="password" name="senha"></p>
+        
+        <input type="submit" value="enviar" onclick="mostrarDados()">
+      </form>
     </section>
-    <h2>Resumo do pedido </h2><p></p>
-    <ul class="horizontal-list">
 
-        <li><article>
-            <p><h5>Total dos produtos: R$ 4000,00</h5></p>
-            <p><h5>Total de desconto: R$ 1000,00</h5></p>
-            <b>Total a pagar: R$ 3000,00</b>
-        </article></li>
-        <li><article>
-            <p></p>
-            <input type="text"  size="15" placeholder="Seu CPF"/><p></p>
-            <input type="text" size="15" placeholder="Seu CEP"/><p></p>
-            <input type="text" size="15" placeholder="Seu nome"> 
-        </article></li>
-    </ul>
-    <button id="center" class="buttonPagar">adquirir agora</button>
-</body>
+  </body>
 </html>
+
+<script>
+  var x = document.getElementById("id DOM");
+  var y = x.getElementsByTagName("p");
+  document.write('obtendo o primeiro paragrafo id DOM:'+y[0].innerHTML);
+</script>
+
+<style>
+
+body{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+    
+  header {
+      background-color: #f9f9f9;
+      padding: 20px 0;
+      text-align: center;
+  }
+  ul {
+      list-style: none;
+  }li {
+      display: inline-block;
+      margin-right: 20px;
+  }
+
+  footer{
+      background-color: black;
+      color: white;
+      height: 60px;
+      padding: 40px;
+  }
+
+  button{
+      background-color: black;
+      color: white;
+      border-radius: 10px;
+  }
+
+  article {
+      background-color: #ffffff;
+      padding: 20px;
+  }
+  h1, h4 {
+      font-family: Arial, sans-serif;
+  }
+  h1 {
+      font-size: 24px;
+  }
+  h4 {
+      font-size: 18px;
+  }
+
+  img{
+      border-radius: 20px;
+  }
+
+  a {
+      color: currentColor;
+      text-decoration: none;
+  }
+
+  .box{
+    border: 1px solid #f9f9f9;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+}.box article{
+    background-color: #f9f9f9;
+}
+
+</style>
