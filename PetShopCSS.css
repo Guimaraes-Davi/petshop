@@ -1,17 +1,24 @@
 body{
     margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f9f9f9;
 }
 
 header {
     background-color: #f9f9f9;
     padding: 20px 0;
     text-align: center;
+    width: 100%;
 }
 ul {
     list-style: none;
 }li {
     display: inline-block;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 footer{
@@ -24,21 +31,12 @@ footer{
 button{
     background-color: black;
     color: white;
-    border-radius: 10px;
+    border-radius: 9px;
 }
 
 article {
     background-color: #ffffff;
     padding: 20px;
-}
-h1, h4 {
-    font-family: Arial, sans-serif;
-}
-h1 {
-    font-size: 24px;
-}
-h4 {
-    font-size: 18px;
 }
 
 img{
@@ -54,55 +52,56 @@ div{
     margin: 0px 13vh;
 }
 
-section{
-    display: flex;
-    justify-content: center;
-}.cancelarCenter{
-    display: block;
-}.Centralizar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+footer{
 
-.inputFaleComNosco{
-    height: 200px;
+    bottom: 0;
     width: 100%;
+    height: 2.5rem;
 }
 
-.buttonPagar{
-    width: 90vh;
-    height: 40px;
+.sobreNos{
+    padding: 15px;
+    background-color: #f9f9f9;
+    margin: 30px;
+    border: solid 3px black;
+    width: 95%;
+}
+
+.produto{
+    padding: 15px;
+    width: 200px;
+    background-color: #f9f9f9;
+    border: solid 3px #f9f9f9;
+    margin: 5px;
+}.produto img{
+    height: auto;
+    width: 200px;
 }
 
 .logo-img {
     max-width: 150px;
 }
 
-.banner-img{
-    width: auto;
-    height: 100vh;
+.servicos{
+    margin: 5px;
 }
 
-.horizontal-list {
-    list-style: none; 
+.slider-container {
+    width: 100%;
+    overflow: hidden;
     display: flex;
-    gap: 10px;
-}.horizontal-list li {
-    padding: 0px; 
-    background-color: #f9f9f9; 
+    
 }
-
-.box{
-    border: 1px solid #f9f9f9;
-    border-radius: 20px;
-    background-color: #f9f9f9;
-}.box article{
-    background-color: #f9f9f9;
-}
-
-#center{
+.slider {
     display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-}  
+    transition: transform 0.5s ease-in-out;
+}
+.slide {
+    flex: 0 0 100%;
+    margin-left: 0%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
