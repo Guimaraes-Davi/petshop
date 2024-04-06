@@ -5,17 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="PetShopCSS.css">
+    <script src="script.js"></script>
 </head>
 <header>
     <a href="PetShopHTML.html"><img class="logo-img" src="imgkjhg-removebg-preview.png"></a>
     <nav>
         <ul>
             <li><a href="PetShopHTML.html">Home</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Serviços</a></li>
-            <li><a href="#">Produtos</a></li>
-            <li><a href="#">Contato</a></li>
-            <li><a href="PaginaCarrinho.html">Carinho</a></li>
+            <li><a href="carrinhoPetShop.html">Carinho</a></li>
         </ul>
     </div>
     </nav>
@@ -77,37 +74,37 @@
         <li>
             <div class="servicos">
                 <h2>Banho & Tosa</h2>
-                <img src="serviços\Banho & Tosa.jpg">
+                <img src="servicos\Banho & Tosa.jpg">
             </div>
         </li>
         <li>
             <div class="servicos">
                 <h2>Serviços Veterinários</h2>
-                <img src="serviços\Serviços Veterinários.jpg">
+                <img src="servicos\Serviços Veterinários.jpg">
             </div>
         </li>
         <li>
             <div class="servicos">
                 <h2>Exames de Laboratório</h2>
-                <img src="serviços\Exames de Laboratório.jpg">
+                <img src="servicos\Exames de Laboratório.jpg">
             </div>
         </li>
         <li>
             <div class="servicos">
                 <h2>Táxi Dog</h2>
-                <img src="serviços\Táxi Dog.jpg">
+                <img src="servicos\Táxi Dog.jpg">
             </div>
         </li>
         <li>
             <div class="servicos">
                 <h2>Hospedagem</h2>
-                <img src="serviços\Hospedagem.jpg">
+                <img src="servicos\Hospedagem.jpg">
             </div>
         </li>
         <li>
             <div class="servicos">
                 <h2>Adestramento</h2>
-                <img src="serviços\Adestramento.jpg">
+                <img src="servicos\Adestramento.jpg">
             </div>
         </li>
     </ul>
@@ -122,7 +119,7 @@
                 <img src="produtos\Produto1.jpg">
                 <p>Descrição do Produto</p>
                 <p>Preço: R$ 50,00</p>
-                <button>Comprar</button>
+                <button class="buy-btn">Comprar</button>
             </div>
         </li>
         <li>
@@ -131,7 +128,7 @@
                 <img src="produtos\Produto2.jpg">
                 <p>Descrição do Produto</p>
                 <p>Preço: R$ 50,00</p>
-                <button>Comprar</button>
+                <button class="buy-btn">Comprar</button>
             </div>
         </li>
         <li>
@@ -140,7 +137,7 @@
                 <img src="produtos\Produto3.jpg">
                 <p>Descrição do Produto</p>
                 <p>Preço: R$ 50,00</p>
-                <button>Comprar</button>
+                <button class="buy-btn">Comprar</button>
             </div>
         </li>
         <li>
@@ -149,7 +146,7 @@
                 <img src="produtos\Produto4.jpg">
                 <p>Descrição do Produto</p>
                 <p>Preço: R$ 50,00</p>
-                <button>Comprar</button>
+                <button class="buy-btn">Comprar</button>
             </div>
         </li>
         <li>
@@ -158,7 +155,7 @@
                 <img src="produtos\Produto5.jpg">
                 <p>Descrição do Produto</p>
                 <p>Preço: R$ 50,00</p>
-                <button>Comprar</button>
+                <button class="buy-btn">Comprar</button>
             </div>
         </li>
         <li>
@@ -167,7 +164,7 @@
                 <img src="produtos\Produto6.jpg">
                 <p>Descrição do Produto</p>
                 <p>Preço: R$ 50,00</p>
-                <button>Comprar</button>
+                <button class="buy-btn">Comprar</button>
             </div>
         </li>
     </ul>
@@ -216,11 +213,10 @@
             <a href="#" target="_blank"><img src="twitter-icon.png" alt="Twitter"></a>
             <a href="#" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
         </div>
-        <p>&copy; 2024 Seu Site. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Este Site. Todos os direitos reservados.</p>
     </footer>
 </body>
 <script>
-    // Função para criar o efeito de slide automático
     function startSlider() {
         const slider = document.querySelector('.slider');
         const slides = document.querySelectorAll('.slide');
@@ -229,10 +225,9 @@
         setInterval(() => {
             currentIndex = (currentIndex + 1) % slides.length;
             slider.style.transform = `translateX(-${currentIndex * 107}%)`;
-        }, 3000); // Altere o valor para ajustar o tempo de transição
+        }, 3000); 
     }
 
-    // Inicia o slide automaticamente
     startSlider();
 </script>
 </html>
