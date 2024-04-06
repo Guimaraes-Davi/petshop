@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="PetShopCSS.css">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="PetShopCSS.css">
+<title>Carrinho de Compras</title>
 </head>
 <body>
-    <header>
-        <a href="PetShopHTML.html"><img class="logo-img" src="imgkjhg-removebg-preview.png"></a>
-        <nav>
-            <ul>
-                <li><a href="PetShopHTML.html">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Produtos</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="PaginaCarrinho.html">Carinho</a></li>
-            </ul>
-        </div>
-        </nav>
-    </header>
+  <header>
+    <a href="PetShopHTML.html"><img class="logo-img" src="imgkjhg-removebg-preview.png"></a>
+    <nav>
+        <ul>
+            <li><a href="homePetShop.html">Home</a></li>
+            <li><a href="PaginaCarrinho.html">Carinho</a></li>
+        </ul>
+    </div>
+    </nav>
+</header>
 
-    <img id="center" src="image.png"> 
-    <h1>Carrinho</h1>
-    <section class="box">
-        <img src="https://a-static.mlcdn.com.br/102x76/playstation-5-marvels-spider-man-2-825gb-1-controle-branco/magazineluiza/238000000/54e5dcaf5f743a339602fa2df7c0cb2c.jpg">    
-        <article>
-            <h5>PlayStation 5 Marvels Spider-Man 2 - 825GB 1 Controle Branco</h5>
-            <h5>Valor: R$ 4000,00</h5>
-            <h5>Vendido e entregue por MAGALU</h5>
-            Quantidade:
-            <select name="" id="cabecalho">4</select>🗑️
+<ul id="cart"></ul>
 
-        </article>
-    </section>
-    <h2>Resumo do pedido </h2><p></p>
-    <ul class="horizontal-list">
+<script src="script.js"></script>
+<script>
+function displayCart() {
+  const cart = JSON.parse(localStorage.getItem('cart'));
+  const cartList = document.getElementById('cart');
+  cartList.innerHTML = '';
+  if (cart && cart.length > 0) {
+    cart.forEach(item => {
+      const cartItem = document.createElement('li');
 
-        <li><article>
-            <p><h5>Total dos produtos: R$ 4000,00</h5></p>
-            <p><h5>Total de desconto: R$ 1000,00</h5></p>
-            <b>Total a pagar: R$ 3000,00</b>
-        </article></li>
-        <li><article>
-            <p></p>
-            <input type="text"  size="15" placeholder="Seu CPF"/><p></p>
-            <input type="text" size="15" placeholder="Seu CEP"/><p></p>
-            <input type="text" size="15" placeholder="Seu nome"> 
-        </article></li>
-    </ul>
-    <button id="center" class="buttonPagar">adquirir agora</button>
+      const itemImage = document.createElement('img');
+      itemImage.src = item.image;
+      itemImage.alt = item.name;
+      cartItem.appendChild(itemImage);
+
+      const itemName = document.createElement('p');
+      itemName.textContent = item.name;
+      cartItem.appendChild(itemName);
+
+      const itemPrice = document.createElement('p');
+      itemPrice.textContent = item.price;
+      cartItem.appendChild(itemPrice);
+
+      cartList.appendChild(cartItem);
+    });
+  } else {
+    cartList.innerHTML = '<p>Carrinho vazio</p>';
+  }
+}
+
+window.onload = displayCart;
+</script>
 </body>
 </html>
